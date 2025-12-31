@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim Vu | Interior Design Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">KV</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#design-process" class="nav-link">Process</a></li>
+                <li><a href="#materials" class="nav-link">Materials</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #2d2419;"></div>
+                <div class="color-swatch" style="background: #5a6b4a;"></div>
+                <div class="color-swatch" style="background: #e8dcc4;"></div>
+                <div class="color-swatch" style="background: #6b5a47;"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="line">Kim Vu</span>
+                <span class="line">Interior Design</span>
+            </h1>
+            <p class="hero-subtitle">Creating spaces that harmonize with nature and light</p>
+            <div class="hero-scroll">
+                <div class="scroll-indicator"></div>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="float-element float-1"></div>
+            <div class="float-element float-2"></div>
+            <div class="float-element float-3"></div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Selected Works</h2>
+                <p class="section-subtitle">Exploring form, material, and light through thoughtful design</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- LUMA House -->
+                <div class="portfolio-item" data-project="luma">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/1.jpg" alt="LUMA House" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3>LUMA House</h3>
+                            <p>Temporary Living Structure</p>
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infinity Shelter -->
+                <div class="portfolio-item" data-project="infinity">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/2.jpg" alt="Infinity Shelter" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3>Infinity Shelter</h3>
+                            <p>Figure-Eight Shared Space</p>
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Architectural Designs -->
+                <div class="portfolio-item" data-project="architectural">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/3.jpg" alt="Architectural Concepts" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3>Architectural Concepts</h3>
+                            <p>Modern Dwellings & Spaces</p>
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floor Plans -->
+                <div class="portfolio-item" data-project="floorplans">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/4.jpg" alt="Floor Plans" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3>Floor Plans</h3>
+                            <p>Space Planning & Layout</p>
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Process -->
+                <div class="portfolio-item" data-project="process">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/5.jpg" alt="Design Process" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3>Design Process</h3>
+                            <p>Sketches & Exploration</p>
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Site Plans -->
+                <div class="portfolio-item" data-project="site">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/6.jpg" alt="Site Plans" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3>Site Plans</h3>
+                            <p>Landscape Integration</p>
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Detail Sections -->
+    <section id="project-luma" class="project-detail" data-project="luma">
+        <div class="project-detail-background"></div>
+        <div class="container">
+            <div class="project-detail-content">
+                <div class="project-detail-image">
+                    <img src="images/1.jpg" alt="LUMA House" class="project-main-image">
+                    <div class="project-image-nav">
+                        <span class="project-nav-prev" data-project="luma">&#8249;</span>
+                        <span class="project-nav-next" data-project="luma">&#8250;</span>
+                        <div class="project-image-counter" data-project="luma">1 / 3</div>
+                    </div>
+                </div>
+                <div class="project-detail-text">
+                    <h2>LUMA House</h2>
+                    <p>LUMA House is a small, light-filled retreat designed to sit gently within its landscape. Its curved form softens the boundary between built space and nature, while the glass facade allows daylight to move freely through the interior. The structure feels calm and grounded, offering openness without losing privacy. LUMA House is meant to be a quiet place for rest, reflection, and simple living, shaped by light, material, and its surroundings.</p>
+                    
+                    <!-- Project Specifications -->
+                    <div class="project-specs">
+                        <button class="specs-toggle" onclick="toggleSpecs('luma')">
+                            <span>Project Details</span>
+                            <span class="specs-icon">+</span>
+                        </button>
+                        <div class="specs-content" id="specs-luma">
+                            <div class="spec-item">
+                                <span class="spec-label">Materials:</span>
+                                <span class="spec-value">Glass, Wood, Concrete</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Area:</span>
+                                <span class="spec-value">450 sq ft</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Year:</span>
+                                <span class="spec-value">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Material Showcase -->
+                    <div class="material-showcase">
+                        <h3>Key Materials</h3>
+                        <div class="materials-grid">
+                            <div class="material-item">
+                                <div class="material-swatch" style="background: linear-gradient(135deg, #8b7355 0%, #6b5a47 100%);"></div>
+                                <span class="material-name">Oak Wood</span>
+                            </div>
+                            <div class="material-item">
+                                <div class="material-swatch" style="background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);"></div>
+                                <span class="material-name">Clear Glass</span>
+                            </div>
+                            <div class="material-item">
+                                <div class="material-swatch" style="background: linear-gradient(135deg, #9d9d9d 0%, #7a7a7a 100%);"></div>
+                                <span class="material-name">Concrete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project-infinity" class="project-detail" data-project="infinity">
+        <div class="project-detail-background"></div>
+        <div class="container">
+            <div class="project-detail-content">
+                <div class="project-detail-image">
+                    <img src="images/2.jpg" alt="Infinity Shelter" class="project-main-image">
+                </div>
+                <div class="project-detail-text">
+                    <h2>Infinity Shelter</h2>
+                    <p>Infinity is a figure-eight shelter designed as a shared space for pause and connection. Its looping form creates two intimate areas linked by a central crossing, allowing people to gather, rest, and move naturally within the landscape. The design explores the infinity shape through sketches, focusing on curved seating and wood as the main material. The figure-eight form creates two connected areas that feel social, comfortable, and open to light and nature.</p>
+                    
+                    <!-- Project Specifications -->
+                    <div class="project-specs">
+                        <button class="specs-toggle" onclick="toggleSpecs('infinity')">
+                            <span>Project Details</span>
+                            <span class="specs-icon">+</span>
+                        </button>
+                        <div class="specs-content" id="specs-infinity">
+                            <div class="spec-item">
+                                <span class="spec-label">Materials:</span>
+                                <span class="spec-value">Cedar Wood, Steel</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Type:</span>
+                                <span class="spec-value">Public Space</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Year:</span>
+                                <span class="spec-value">2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Material Showcase -->
+                    <div class="material-showcase">
+                        <h3>Key Materials</h3>
+                        <div class="materials-grid">
+                            <div class="material-item">
+                                <div class="material-swatch" style="background: linear-gradient(135deg, #8b6f47 0%, #6b5a3a 100%);"></div>
+                                <span class="material-name">Cedar Wood</span>
+                            </div>
+                            <div class="material-item">
+                                <div class="material-swatch" style="background: linear-gradient(135deg, #c0c0c0 0%, #a0a0a0 100%);"></div>
+                                <span class="material-name">Steel Frame</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project-architectural" class="project-detail" data-project="architectural">
+        <div class="project-detail-background"></div>
+        <div class="container">
+            <div class="project-detail-content">
+                <div class="project-detail-image">
+                    <img src="images/3.jpg" alt="Architectural Concepts" class="project-main-image">
+                </div>
+                <div class="project-detail-text">
+                    <h2>Architectural Concepts</h2>
+                    <p>A collection of modern dwelling designs exploring organic forms, curved structures, and the integration of interior and exterior spaces. These concepts emphasize natural materials, light-filled interiors, and harmonious relationships with their environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project-floorplans" class="project-detail" data-project="floorplans">
+        <div class="project-detail-background"></div>
+        <div class="container">
+            <div class="project-detail-content">
+                <div class="project-detail-image">
+                    <img src="images/4.jpg" alt="Floor Plans" class="project-main-image">
+                </div>
+                <div class="project-detail-text">
+                    <h2>Floor Plans & Space Planning</h2>
+                    <p>Thoughtful space planning and layout design for various residential projects. Each plan considers flow, function, and the relationship between different living areas, creating efficient and comfortable spaces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project-process" class="project-detail" data-project="process">
+        <div class="project-detail-background"></div>
+        <div class="container">
+            <div class="project-detail-content">
+                <div class="project-detail-image">
+                    <img src="images/5.jpg" alt="Design Process" class="project-main-image">
+                </div>
+                <div class="project-detail-text">
+                    <h2>Design Process</h2>
+                    <p>The design process explores form, material, and function through sketches and iterative exploration. This work focuses on curved seating, wood as the main material, and creating spaces that feel social, comfortable, and open to light and nature.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project-site" class="project-detail" data-project="site">
+        <div class="project-detail-background"></div>
+        <div class="container">
+            <div class="project-detail-content">
+                <div class="project-detail-image">
+                    <img src="images/6.jpg" alt="Site Plans" class="project-main-image">
+                </div>
+                <div class="project-detail-text">
+                    <h2>Site Plans & Landscape Integration</h2>
+                    <p>Site planning and landscape integration designs that consider the relationship between built structures and their natural surroundings. These plans explore how architecture can sit gently within its environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for zoomed images -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#8249;</span>
+        <span class="lightbox-next">&#8250;</span>
+        <img src="" alt="" id="lightboxImage" class="lightbox-image">
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- Design Process Timeline -->
+    <section id="design-process" class="design-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Design Process</h2>
+                <p class="section-subtitle">A thoughtful approach to creating meaningful spaces</p>
+            </div>
+            <div class="process-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-content">
+                        <h3>Discovery</h3>
+                        <p>Understanding client needs, site context, and project goals through consultation and research.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-content">
+                        <h3>Concept Development</h3>
+                        <p>Exploring form, material, and spatial relationships through sketches and conceptual studies.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-content">
+                        <h3>Design Development</h3>
+                        <p>Refining concepts into detailed plans, selecting materials, and developing technical drawings.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-content">
+                        <h3>Implementation</h3>
+                        <p>Collaborating with contractors and craftspeople to bring the design to life with precision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Library -->
+    <section id="materials" class="materials-library">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Materials Library</h2>
+                <p class="section-subtitle">A curated selection of materials and textures</p>
+            </div>
+            <div class="materials-grid-large">
+                <div class="material-card">
+                    <div class="material-preview" style="background: linear-gradient(135deg, #8b7355 0%, #6b5a47 100%);"></div>
+                    <div class="material-info">
+                        <h3>Natural Wood</h3>
+                        <p>Warm, organic textures that bring nature indoors</p>
+                    </div>
+                </div>
+                <div class="material-card">
+                    <div class="material-preview" style="background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);"></div>
+                    <div class="material-info">
+                        <h3>Glass & Light</h3>
+                        <p>Transparent surfaces that enhance spatial flow</p>
+                    </div>
+                </div>
+                <div class="material-card">
+                    <div class="material-preview" style="background: linear-gradient(135deg, #9d9d9d 0%, #7a7a7a 100%);"></div>
+                    <div class="material-info">
+                        <h3>Concrete & Stone</h3>
+                        <p>Raw, honest materials with timeless appeal</p>
+                    </div>
+                </div>
+                <div class="material-card">
+                    <div class="material-preview" style="background: linear-gradient(135deg, #5a6b4a 0%, #4a5a3a 100%);"></div>
+                    <div class="material-info">
+                        <h3>Natural Textiles</h3>
+                        <p>Soft fabrics that add comfort and warmth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About</h2>
+                    <p class="about-description">
+                        Kim Vu is an interior designer and architect focused on creating spaces that harmonize 
+                        with their natural surroundings. Through thoughtful exploration of form, material, and light, 
+                        each project seeks to blur the boundaries between built space and nature.
+                    </p>
+                    <p class="about-description">
+                        The work emphasizes comfort, social connection, and the integration of natural elements, 
+                        using materials like wood to create warm, inviting environments that feel both modern and timeless.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <img src="images/her.jpg" alt="Kim Vu" class="about-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Kim Vu</div>
+                <p class="footer-text">© 2024 Kim Vu. All rights reserved.</p>
+                <div class="footer-contact">
+                    <a href="mailto:kkimvu02@gmail.com" class="footer-link">kkimvu02@gmail.com</a>
+                    <span class="footer-separator">•</span>
+                    <a href="tel:647-864-4699" class="footer-link">647-864-4699</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/_kkimvu/?hl=en" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+                    <a href="https://www.linkedin.com/in/kim-vu-746471262/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
