@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <!-- One lotus centered in 0 0 200 200 - embroidered white style -->
+    <g id="lotus">
+      <path fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="0.9" stroke-linecap="round" d="M 100 72 Q 112 64 120 78 Q 128 92 116 102 Q 104 112 96 96 Q 88 80 100 72"/>
+      <path fill="none" stroke="rgba(255,255,255,0.36)" stroke-width="0.85" stroke-linecap="round" d="M 100 72 Q 88 66 78 80 Q 68 94 80 106 Q 92 118 100 102 Q 108 86 100 72"/>
+      <path fill="none" stroke="rgba(255,255,255,0.34)" stroke-width="0.8" stroke-linecap="round" d="M 100 72 Q 90 82 88 98 Q 86 114 96 120 Q 106 126 112 110 Q 118 94 100 72"/>
+      <path fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="0.8" stroke-linecap="round" d="M 100 72 Q 110 80 114 96 Q 118 112 108 118 Q 98 124 92 108 Q 86 92 100 72"/>
+      <path fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.75" d="M 100 72 Q 98 88 100 100 Q 102 112 100 118"/>
+      <circle cx="100" cy="88" r="5" fill="none" stroke="rgba(255,255,255,0.42)" stroke-width="0.5"/>
+    </g>
+    <g id="lotus-sm">
+      <path fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="0.45" d="M 160 40 Q 164 36 166 40 Q 168 44 164 46 Q 160 48 158 44 Q 156 40 160 40"/>
+      <circle cx="162" cy="42" r="2" fill="none" stroke="rgba(255,255,255,0.26)" stroke-width="0.35"/>
+    </g>
+    <pattern id="lotus-repeat" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <use href="#lotus"/>
+      <use href="#lotus" transform="translate(100,100) rotate(60)"/>
+      <use href="#lotus-sm"/>
+      <use href="#lotus-sm" transform="translate(30,160)"/>
+      <use href="#lotus-sm" transform="translate(170,30) rotate(-40)"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#lotus-repeat)"/>
+</svg>

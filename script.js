@@ -132,37 +132,19 @@ if (document.readyState === 'loading') {
     setTimeout(initPortfolioItems, 100);
 }
 
-// Project data
+// Project data (matches PDF: first 4 pages = LUMA, pages 5–7 = Infinity)
 const projects = {
     luma: {
         title: 'LUMA House',
+        subtitle: 'Temporary living structure',
         description: 'LUMA House is a small, light-filled retreat designed to sit gently within its landscape. Its curved form softens the boundary between built space and nature, while the glass facade allows daylight to move freely through the interior. The structure feels calm and grounded, offering openness without losing privacy. LUMA House is meant to be a quiet place for rest, reflection, and simple living, shaped by light, material, and its surroundings.',
-        images: ['images/1.jpg', 'images/7.jpg', 'images/8.jpg']
+        images: ['images/1.jpg', 'images/2.jpg', 'images/3.jpg']
     },
     infinity: {
         title: 'Infinity Shelter',
+        subtitle: 'Figure-eight shared space',
         description: 'Infinity is a figure-eight shelter designed as a shared space for pause and connection. Its looping form creates two intimate areas linked by a central crossing, allowing people to gather, rest, and move naturally within the landscape. The design explores the infinity shape through sketches, focusing on curved seating and wood as the main material. The figure-eight form creates two connected areas that feel social, comfortable, and open to light and nature.',
-        images: ['images/2.jpg']
-    },
-    architectural: {
-        title: 'Architectural Concepts',
-        description: 'A collection of modern dwelling designs exploring organic forms, curved structures, and the integration of interior and exterior spaces. These concepts emphasize natural materials, light-filled interiors, and harmonious relationships with their environments.',
-        images: ['images/3.jpg']
-    },
-    floorplans: {
-        title: 'Floor Plans & Space Planning',
-        description: 'Thoughtful space planning and layout design for various residential projects. Each plan considers flow, function, and the relationship between different living areas, creating efficient and comfortable spaces.',
-        images: ['images/4.jpg']
-    },
-    process: {
-        title: 'Design Process',
-        description: 'The design process explores form, material, and function through sketches and iterative exploration. This work focuses on curved seating, wood as the main material, and creating spaces that feel social, comfortable, and open to light and nature.',
-        images: ['images/5.jpg']
-    },
-    site: {
-        title: 'Site Plans & Landscape Integration',
-        description: 'Site planning and landscape integration designs that consider the relationship between built structures and their natural surroundings. These plans explore how architecture can sit gently within its environment.',
-        images: ['images/6.jpg']
+        images: ['images/5.jpg', 'images/6.jpg', 'images/4.jpg']
     }
 };
 
@@ -274,11 +256,6 @@ function updateProjectBackground(projectId, imageIndex = 0) {
         img.src = imageSrc;
     }
     
-    // Set green background for last three projects
-    const greenProjects = ['floorplans', 'process', 'site'];
-    if (greenProjects.includes(projectId)) {
-        section.style.background = 'linear-gradient(135deg, #3a4a2a 0%, #2a3a1a 100%)';
-    }
 }
 
 // Initialize backgrounds on load

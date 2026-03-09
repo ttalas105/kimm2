@@ -6,20 +6,23 @@
 }
 
 :root {
-    --color-cream: #2d2419;
-    --color-beige: #3d2f20;
-    --color-taupe: #4a3a2a;
-    --color-brown: #6b5a47;
+    --color-cream: #4a2020;
+    --color-beige: #5c2828;
+    --color-taupe: #6b3232;
+    --color-brown: #b8956e;
     --color-dark-brown: #e8dcc4;
-    --color-green: #5a6b4a;
-    --color-dark-green: #4a5a3a;
-    --color-forest: #3a4a2a;
+    --color-green: #8b5a5a;
+    --color-dark-green: #7a4a4a;
+    --color-forest: #6b3a3a;
     --color-white: #f5f1e8;
-    --color-black: #1a1814;
+    --color-black: #2a1515;
     --color-light: #f5f1e8;
     
-    --font-serif: 'Playfair Display', serif;
-    --font-sans: 'Inter', sans-serif;
+    --font-body: 'Copperplate Gothic Std 29 BC', 'Copperplate Gothic', serif;
+    --font-headline: 'Les Palmiers', 'Cinzel', serif;
+    --font-subtitle: 'Belleza', sans-serif;
+    --font-serif: 'Les Palmiers', 'Cinzel', serif;
+    --font-sans: 'Copperplate Gothic Std 29 BC', 'Copperplate Gothic', serif;
     
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s ease;
@@ -30,9 +33,9 @@ html {
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     color: var(--color-white);
-    background: linear-gradient(135deg, #2d2419 0%, #1a1814 50%, #2d2419 100%);
+    background: linear-gradient(135deg, #4a2020 0%, #2a1515 50%, #4a2020 100%);
     background-attachment: fixed;
     line-height: 1.6;
     overflow-x: hidden;
@@ -57,7 +60,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(45, 36, 25, 0.95);
+    background: rgba(74, 32, 32, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1.5rem 0;
@@ -81,11 +84,18 @@ body {
 }
 
 .logo {
-    font-family: var(--font-serif);
-    font-size: 1.8rem;
+    display: block;
+    text-decoration: none;
+    line-height: 1;
+    font-family: var(--font-headline);
+    font-size: 2.25rem;
     font-weight: 700;
     color: var(--color-white);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    opacity: 0.95;
+}
+.logo:hover {
+    opacity: 1;
 }
 
 .nav-menu {
@@ -98,7 +108,7 @@ body {
     text-decoration: none;
     color: var(--color-white);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     position: relative;
     transition: var(--transition-fast);
 }
@@ -140,7 +150,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(135deg, #2d2419 0%, #3d2f20 50%, #2d2419 100%);
+    background: linear-gradient(135deg, #4a2020 0%, #5c2828 50%, #4a2020 100%);
 }
 
 .hero-background {
@@ -149,10 +159,38 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(circle at 20% 30%, rgba(90, 107, 74, 0.2) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(74, 90, 58, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(107, 90, 71, 0.1) 0%, transparent 50%);
+    background:
+        radial-gradient(circle at 20% 30%, rgba(139, 90, 90, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(92, 40, 40, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(184, 149, 110, 0.06) 0%, transparent 50%);
+}
+
+/* Embroidered background – scrollwork and stitch texture, no lotus */
+.hero-embroidery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/embroidery-pattern.svg');
+    background-repeat: repeat;
+    background-size: 400px 400px;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Subtle paper-like texture over hero */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
 }
 
 .gradient-overlay {
@@ -161,7 +199,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, transparent 0%, rgba(42, 37, 32, 0.3) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(42, 20, 20, 0.4) 100%);
 }
 
 /* Color Palette Swatches */
@@ -199,12 +237,13 @@ body {
 }
 
 .hero-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: clamp(3rem, 8vw, 7rem);
     font-weight: 700;
-    color: var(--color-white);
+    color: #e8dcc4;
     margin-bottom: 1.5rem;
-    line-height: 1.1;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
 }
 
 .hero-title .line {
@@ -218,13 +257,34 @@ body {
     animation-delay: 0.2s;
 }
 
+/* Kim Vu – Alex Brush script */
+.hero-title .hero-name {
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+    font-size: clamp(3.2rem, 9vw, 7.5rem);
+    letter-spacing: 0.02em;
+    color: #e8dcc4;
+}
+
+/* Script / “Romance Reimagined” style for tagline */
+.hero-title .hero-tagline {
+    font-family: var(--font-subtitle);
+    font-weight: 400;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    letter-spacing: 0.02em;
+    color: #d4c4a0;
+    margin-top: 0.15em;
+}
+
 .hero-subtitle {
+    font-family: var(--font-subtitle);
     font-size: clamp(1rem, 2vw, 1.3rem);
-    color: var(--color-brown);
+    color: #b8956e;
     font-weight: 300;
     opacity: 0;
     animation: fadeInUp 1s ease 0.4s forwards;
     margin-bottom: 3rem;
+    letter-spacing: 0.03em;
 }
 
 .hero-scroll {
@@ -270,7 +330,7 @@ body {
 .float-element {
     position: absolute;
     border-radius: 50%;
-    background: rgba(122, 138, 108, 0.15);
+    background: rgba(139, 90, 90, 0.2);
     backdrop-filter: blur(20px);
     animation: float 20s infinite ease-in-out;
 }
@@ -317,7 +377,7 @@ section {
 }
 
 .section-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
     color: var(--color-white);
@@ -325,6 +385,7 @@ section {
 }
 
 .section-subtitle {
+    font-family: var(--font-subtitle);
     font-size: 1.1rem;
     color: var(--color-brown);
     font-weight: 300;
@@ -334,7 +395,7 @@ section {
 
 /* Portfolio Section */
 .portfolio {
-    background: linear-gradient(180deg, #2d2419 0%, #3d2f20 100%);
+    background: linear-gradient(180deg, #4a2020 0%, #5c2828 100%);
 }
 
 .portfolio-grid {
@@ -399,7 +460,7 @@ section {
 }
 
 .project-label {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: 1.8rem;
     color: var(--color-white);
     opacity: 0.5;
@@ -412,7 +473,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(26, 22, 18, 0.85) 0%, rgba(10, 10, 10, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(42, 21, 21, 0.88) 0%, rgba(26, 15, 15, 0.92) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -434,7 +495,7 @@ section {
 }
 
 .portfolio-overlay h3 {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: 2rem;
     color: var(--color-white);
     margin-bottom: 0.5rem;
@@ -477,7 +538,7 @@ section {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(26, 26, 24, 0.95);
+    background: rgba(42, 21, 21, 0.95);
     backdrop-filter: blur(10px);
     animation: fadeIn 0.3s ease;
 }
@@ -587,7 +648,7 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(26, 26, 24, 0.6);
+    background: rgba(42, 21, 21, 0.6);
     user-select: none;
 }
 
@@ -601,7 +662,7 @@ section {
 
 .modal-prev:hover,
 .modal-next:hover {
-    background: rgba(26, 26, 24, 0.9);
+    background: rgba(42, 21, 21, 0.9);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -612,7 +673,7 @@ section {
     transform: translateX(-50%);
     color: var(--color-white);
     font-size: 0.9rem;
-    background: rgba(26, 26, 24, 0.7);
+    background: rgba(42, 21, 21, 0.7);
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     z-index: 2001;
@@ -628,7 +689,7 @@ section {
 }
 
 .modal-text-content h2 {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--color-white);
@@ -672,7 +733,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(45, 36, 25, 0.95) 0%, rgba(26, 24, 20, 0.98) 100%);
+    background: linear-gradient(135deg, rgba(74, 32, 32, 0.95) 0%, rgba(42, 21, 21, 0.98) 100%);
     z-index: 1;
 }
 
@@ -680,13 +741,13 @@ section {
 #project-floorplans .project-detail-background::after,
 #project-process .project-detail-background::after,
 #project-site .project-detail-background::after {
-    background: linear-gradient(135deg, rgba(58, 74, 42, 0.95) 0%, rgba(42, 58, 32, 0.98) 100%);
+    background: linear-gradient(135deg, rgba(107, 58, 58, 0.95) 0%, rgba(74, 42, 42, 0.98) 100%);
 }
 
 #project-floorplans,
 #project-process,
 #project-site {
-    background: linear-gradient(135deg, #3a4a2a 0%, #2a3a1a 100%);
+    background: linear-gradient(135deg, #6b3a3a 0%, #4a2020 100%);
 }
 
 .project-detail-content {
@@ -745,7 +806,7 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(26, 26, 24, 0.7);
+    background: rgba(42, 21, 21, 0.7);
     user-select: none;
     pointer-events: all;
     opacity: 0.8;
@@ -754,7 +815,7 @@ section {
 .project-nav-prev:hover,
 .project-nav-next:hover {
     opacity: 1;
-    background: rgba(26, 26, 24, 0.9);
+    background: rgba(42, 21, 21, 0.9);
 }
 
 .project-nav-prev {
@@ -767,7 +828,7 @@ section {
 
 .project-nav-prev:hover,
 .project-nav-next:hover {
-    background: rgba(26, 26, 24, 0.9);
+    background: rgba(42, 21, 21, 0.9);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -778,7 +839,7 @@ section {
     transform: translateX(-50%);
     color: var(--color-white);
     font-size: 0.9rem;
-    background: rgba(26, 26, 24, 0.8);
+    background: rgba(42, 21, 21, 0.8);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     z-index: 10;
@@ -790,7 +851,7 @@ section {
 }
 
 .project-detail-text h2 {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: clamp(2rem, 4vw, 3.5rem);
     margin-bottom: 1.5rem;
     color: var(--color-white);
@@ -897,7 +958,7 @@ section {
 }
 
 .material-showcase h3 {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: 1.3rem;
     color: var(--color-white);
     margin-bottom: 1.2rem;
@@ -942,7 +1003,7 @@ section {
 /* Design Process Timeline */
 .design-process {
     padding: 8rem 0;
-    background: linear-gradient(180deg, #2d2419 0%, #1a1814 50%, #2d2419 100%);
+    background: linear-gradient(180deg, #4a2020 0%, #2a1515 50%, #4a2020 100%);
     position: relative;
 }
 
@@ -984,7 +1045,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--color-white);
@@ -994,7 +1055,7 @@ section {
 }
 
 .timeline-content h3 {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: 1.8rem;
     color: var(--color-white);
     margin-bottom: 0.8rem;
@@ -1010,7 +1071,7 @@ section {
 /* Materials Library */
 .materials-library {
     padding: 8rem 0;
-    background: linear-gradient(180deg, #1a1814 0%, #2d2419 100%);
+    background: linear-gradient(180deg, #2a1515 0%, #4a2020 100%);
 }
 
 .materials-grid-large {
@@ -1021,7 +1082,7 @@ section {
 }
 
 .material-card {
-    background: rgba(45, 36, 25, 0.6);
+    background: rgba(74, 32, 32, 0.6);
     border-radius: 12px;
     overflow: hidden;
     transition: var(--transition);
@@ -1050,7 +1111,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, transparent 0%, rgba(26, 24, 20, 0.7) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(42, 21, 21, 0.75) 100%);
 }
 
 .material-info {
@@ -1058,7 +1119,7 @@ section {
 }
 
 .material-info h3 {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: 1.4rem;
     color: var(--color-white);
     margin-bottom: 0.5rem;
@@ -1126,7 +1187,7 @@ section {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 10, 10, 0.98);
+    background: rgba(26, 15, 15, 0.98);
     backdrop-filter: blur(10px);
     animation: fadeIn 0.3s ease;
 }
@@ -1173,12 +1234,12 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(26, 26, 24, 0.5);
+    background: rgba(42, 21, 21, 0.5);
 }
 
 .lightbox-close:hover {
     transform: rotate(90deg);
-    background: rgba(26, 26, 24, 0.8);
+    background: rgba(42, 21, 21, 0.8);
 }
 
 .lightbox-prev,
@@ -1197,7 +1258,7 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(26, 26, 24, 0.5);
+    background: rgba(42, 21, 21, 0.5);
     user-select: none;
 }
 
@@ -1211,7 +1272,7 @@ section {
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
-    background: rgba(26, 26, 24, 0.8);
+    background: rgba(42, 21, 21, 0.8);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -1222,7 +1283,7 @@ section {
     transform: translateX(-50%);
     color: var(--color-white);
     font-size: 1rem;
-    background: rgba(26, 26, 24, 0.5);
+    background: rgba(42, 21, 21, 0.5);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     z-index: 3001;
@@ -1255,7 +1316,7 @@ section {
 
 /* About Section */
 .about {
-    background: linear-gradient(135deg, #2d2419 0%, #3d2f20 50%, #2d2419 100%);
+    background: linear-gradient(135deg, #4a2020 0%, #5c2828 50%, #4a2020 100%);
 }
 
 .about-content {
@@ -1283,7 +1344,7 @@ section {
 }
 
 .stat-number {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: 3rem;
     font-weight: 700;
     color: var(--color-white);
@@ -1315,7 +1376,7 @@ section {
 
 /* Contact Section */
 .contact {
-    background: linear-gradient(180deg, #2d2419 0%, #3d2f20 100%);
+    background: linear-gradient(180deg, #4a2020 0%, #5c2828 100%);
     padding: 8rem 0;
     min-height: 60vh;
     display: flex;
@@ -1380,7 +1441,7 @@ section {
 
 /* Footer */
 .footer {
-    background: linear-gradient(180deg, #2d2419 0%, #1a1814 100%);
+    background: linear-gradient(180deg, #4a2020 0%, #2a1515 100%);
     color: var(--color-brown);
     padding: 3rem 0;
     border-top: 1px solid rgba(212, 196, 168, 0.2);
@@ -1391,7 +1452,7 @@ section {
 }
 
 .footer-logo {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;

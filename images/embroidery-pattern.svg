@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <!-- Embroidered scrollwork / vine motif - delicate stitched look -->
+    <pattern id="stitch" x="0" y="0" width="20" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="2" x2="20" y2="2" stroke="rgba(255,255,255,0.06)" stroke-width="0.4" stroke-dasharray="2 2"/>
+    </pattern>
+    <pattern id="embroidery" x="0" y="0" width="400" height="400" patternUnits="userSpaceOnUse">
+      <!-- Scroll / vine curves -->
+      <path fill="none" stroke="rgba(200,180,150,0.12)" stroke-width="0.6" stroke-linecap="round" d="
+        M 200 50 Q 260 80 240 140 Q 220 200 200 180 Q 180 160 200 120 Q 220 80 200 50
+      "/>
+      <path fill="none" stroke="rgba(200,180,150,0.1)" stroke-width="0.5" stroke-linecap="round" d="
+        M 200 350 Q 140 320 160 260 Q 180 200 200 220 Q 220 240 200 280 Q 180 320 200 350
+      "/>
+      <path fill="none" stroke="rgba(200,180,150,0.08)" stroke-width="0.45" d="
+        M 80 200 Q 120 180 140 200 Q 160 220 120 240 Q 80 260 80 200
+      "/>
+      <path fill="none" stroke="rgba(200,180,150,0.08)" stroke-width="0.45" d="
+        M 320 200 Q 280 220 260 200 Q 240 180 280 160 Q 320 140 320 200
+      "/>
+      <!-- Small flourishes -->
+      <path fill="none" stroke="rgba(220,200,170,0.15)" stroke-width="0.4" d="M 50 100 Q 70 90 80 100 Q 70 110 50 100"/>
+      <path fill="none" stroke="rgba(220,200,170,0.15)" stroke-width="0.4" d="M 350 300 Q 330 310 320 300 Q 330 290 350 300"/>
+      <path fill="none" stroke="rgba(220,200,170,0.12)" stroke-width="0.35" d="M 100 320 Q 115 310 120 320 Q 115 330 100 320"/>
+      <path fill="none" stroke="rgba(220,200,170,0.12)" stroke-width="0.35" d="M 300 80 Q 285 90 280 80 Q 285 70 300 80"/>
+      <!-- Subtle stitch texture overlay -->
+      <rect width="400" height="400" fill="url(#stitch)" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#embroidery)"/>
+</svg>
