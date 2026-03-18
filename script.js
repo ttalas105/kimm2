@@ -132,7 +132,7 @@ if (document.readyState === 'loading') {
     setTimeout(initPortfolioItems, 100);
 }
 
-// Project data (matches PDF: first 4 pages = LUMA, pages 5–7 = Infinity)
+// Project data
 const projects = {
     luma: {
         title: 'LUMA House',
@@ -145,6 +145,12 @@ const projects = {
         subtitle: 'Figure-eight shared space',
         description: 'Infinity is a figure-eight shelter designed as a shared space for pause and connection. Its looping form creates two intimate areas linked by a central crossing, allowing people to gather, rest, and move naturally within the landscape. The design explores the infinity shape through sketches, focusing on curved seating and wood as the main material. The figure-eight form creates two connected areas that feel social, comfortable, and open to light and nature.',
         images: ['images/5.jpg', 'images/6.jpg', 'images/4.jpg']
+    },
+    laneway: {
+        title: 'Laneway House',
+        subtitle: 'Family-scale urban infill',
+        description: 'Laneway House is a compact urban infill project designed to support real family living on a tight lot. The concept uses a steel plate-inspired exterior language, expressed through a dark facade and clear panel rhythm. The plan prioritizes practical circulation, flexible shared areas, and efficient storage so the home can support daily life comfortably over time.',
+        images: ['images/laneway-1.png', 'images/laneway-2.png', 'images/laneway-3.png', 'images/laneway-4.png', 'images/laneway-5.png']
     }
 };
 
@@ -505,19 +511,91 @@ window.addEventListener('load', () => {
 
 // Scroll animations and parallax effects removed - keeping it simple
 
-// Color palette interaction
-document.querySelectorAll('.color-swatch').forEach(swatch => {
-    swatch.addEventListener('click', function() {
-        const color = window.getComputedStyle(this).backgroundColor;
-        document.body.style.setProperty('--accent-color', color);
-        
-        // Visual feedback
-        this.style.transform = 'scale(1.3)';
-        setTimeout(() => {
-            this.style.transform = '';
-        }, 300);
+// Theme switcher
+const themes = {
+    burgundy: {
+        "--bg-main": "#4a2020",
+        "--bg-alt": "#5c2828",
+        "--bg-deep": "#2a1515",
+        "--nav-bg": "rgba(74, 32, 32, 0.95)",
+        "--hero-overlay": "rgba(42, 20, 20, 0.4)",
+        "--project-overlay-start": "rgba(74, 32, 32, 0.95)",
+        "--project-overlay-end": "rgba(42, 21, 21, 0.98)",
+        "--card-bg-soft": "rgba(74, 32, 32, 0.6)",
+        "--text-color": "#f5f1e8",
+        "--text-light": "#d4c4a8",
+        "--hero-title-color": "#e8dcc4",
+        "--hero-subtitle-color": "#b8956e"
+    },
+    cream: {
+        "--bg-main": "#E8E4DE",
+        "--bg-alt": "#F0EDE8",
+        "--bg-deep": "#D5D0C9",
+        "--nav-bg": "rgba(232, 228, 222, 0.95)",
+        "--hero-overlay": "rgba(213, 208, 201, 0.28)",
+        "--project-overlay-start": "rgba(232, 228, 222, 0.9)",
+        "--project-overlay-end": "rgba(213, 208, 201, 0.95)",
+        "--card-bg-soft": "rgba(232, 228, 222, 0.55)",
+        "--text-color": "#2a2420",
+        "--text-light": "#4a4540",
+        "--hero-title-color": "#2a2420",
+        "--hero-subtitle-color": "#5a4a3a"
+    },
+    green: {
+        "--bg-main": "#2f4a3a",
+        "--bg-alt": "#3f5f4b",
+        "--bg-deep": "#1d3025",
+        "--nav-bg": "rgba(47, 74, 58, 0.95)",
+        "--hero-overlay": "rgba(29, 48, 37, 0.4)",
+        "--project-overlay-start": "rgba(47, 74, 58, 0.95)",
+        "--project-overlay-end": "rgba(29, 48, 37, 0.98)",
+        "--card-bg-soft": "rgba(47, 74, 58, 0.58)",
+        "--text-color": "#f5f1e8",
+        "--text-light": "#d4c4a8",
+        "--hero-title-color": "#e8dcc4",
+        "--hero-subtitle-color": "#b8956e"
+    },
+    yellow: {
+        "--bg-main": "#d8c77d",
+        "--bg-alt": "#e6d797",
+        "--bg-deep": "#c5b26b",
+        "--nav-bg": "rgba(216, 199, 125, 0.95)",
+        "--hero-overlay": "rgba(197, 178, 107, 0.35)",
+        "--text-color": "#2a2420",
+        "--text-light": "#3a3228",
+        "--hero-title-color": "#2a2420",
+        "--hero-subtitle-color": "#3a3228",
+        "--project-overlay-start": "rgba(216, 199, 125, 0.92)",
+        "--project-overlay-end": "rgba(197, 178, 107, 0.96)",
+        "--card-bg-soft": "rgba(216, 199, 125, 0.55)"
+    }
+};
+
+function applyTheme(themeName) {
+    const selectedTheme = themes[themeName] || themes.burgundy;
+    Object.entries(selectedTheme).forEach(([key, value]) => {
+        document.documentElement.style.setProperty(key, value);
+    });
+
+    document.querySelectorAll('.theme-btn').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.theme === themeName);
+    });
+
+    localStorage.setItem('kimvu-theme', themeName);
+}
+
+document.querySelectorAll('.theme-btn').forEach((button) => {
+    button.addEventListener('click', () => {
+        applyTheme(button.dataset.theme);
     });
 });
+
+const savedTheme = localStorage.getItem('kimvu-theme');
+if (savedTheme && themes[savedTheme]) {
+    applyTheme(savedTheme);
+} else {
+    applyTheme('burgundy');
+}
 
 // Toggle project specifications
 function toggleSpecs(projectId) {

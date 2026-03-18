@@ -24,6 +24,12 @@
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
             </ul>
+            <div class="theme-switcher" aria-label="Theme selector">
+                <button class="theme-btn active" type="button" data-theme="burgundy" title="Burgundy theme" aria-label="Burgundy theme"></button>
+                <button class="theme-btn" type="button" data-theme="cream" title="Clean cream theme" aria-label="Clean cream theme"></button>
+                <button class="theme-btn" type="button" data-theme="green" title="Green theme" aria-label="Green theme"></button>
+                <button class="theme-btn" type="button" data-theme="yellow" title="Pale yellow theme" aria-label="Pale yellow theme"></button>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -37,19 +43,13 @@
         <div class="hero-background">
             <div class="hero-embroidery" aria-hidden="true"></div>
             <div class="gradient-overlay"></div>
-            <div class="color-palette">
-                <div class="color-swatch" style="background: #4a2020;"></div>
-                <div class="color-swatch" style="background: #6b3232;"></div>
-                <div class="color-swatch" style="background: #e8dcc4;"></div>
-                <div class="color-swatch" style="background: #b8956e;"></div>
-            </div>
         </div>
         <div class="hero-content">
             <h1 class="hero-title">
                 <span class="line hero-name">Kim Vu</span>
                 <span class="line hero-tagline">Interior Design</span>
             </h1>
-            <p class="hero-subtitle">Creating spaces that harmonize with nature and light</p>
+            <p class="hero-subtitle">Creating spaces that harmonize with nature, light, and human connection</p>
             <div class="hero-scroll">
                 <div class="scroll-indicator"></div>
             </div>
@@ -84,6 +84,18 @@
                         <div class="portfolio-overlay">
                             <h3>Infinity Shelter</h3>
                             <p>Figure-Eight Shared Space</p>
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laneway House -->
+                <div class="portfolio-item" data-project="laneway">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/laneway-5.png" alt="Laneway House" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3>Laneway House</h3>
+                            <p>Family-Scale Urban Infill</p>
                             <span class="view-project">View Project →</span>
                         </div>
                     </div>
@@ -212,6 +224,65 @@
         </div>
     </section>
 
+    <section id="project-laneway" class="project-detail" data-project="laneway">
+        <div class="project-detail-background"></div>
+        <div class="container">
+            <div class="project-detail-content">
+                <div class="project-detail-image">
+                    <img src="images/laneway-1.png" alt="Laneway House" class="project-main-image">
+                    <div class="project-image-nav">
+                        <span class="project-nav-prev" data-project="laneway">&#8249;</span>
+                        <span class="project-nav-next" data-project="laneway">&#8250;</span>
+                        <div class="project-image-counter" data-project="laneway">1 / 5</div>
+                    </div>
+                </div>
+                <div class="project-detail-text">
+                    <h2>Laneway House</h2>
+                    <p>Laneway House is a compact urban infill project designed to support real family living on a tight lot. The concept uses a steel plate-inspired exterior language, which is expressed through the dark, grounded facade and crisp panel rhythm. Inside, the layout is planned to be efficient but generous, with clear circulation, practical storage, and flexible shared spaces that can support day-to-day routines over time. The project balances durability, comfort, and livability, showing how a laneway home can be both architecturally strong and genuinely functional for a family.</p>
+
+                    <div class="project-specs">
+                        <button class="specs-toggle" onclick="toggleSpecs('laneway')">
+                            <span>Project Details</span>
+                            <span class="specs-icon">+</span>
+                        </button>
+                        <div class="specs-content" id="specs-laneway">
+                            <div class="spec-item">
+                                <span class="spec-label">Materials:</span>
+                                <span class="spec-value">Steel Plate Cladding, Wood Framing, Glass</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Type:</span>
+                                <span class="spec-value">Laneway House</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Focus:</span>
+                                <span class="spec-value">Family-Scale Living</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="material-showcase">
+                        <h3>Key Materials</h3>
+                        <div class="materials-grid">
+                            <div class="material-item">
+                                <div class="material-swatch" style="background: linear-gradient(135deg, #1f1f1f 0%, #0f0f0f 100%);"></div>
+                                <span class="material-name">Steel Plate Finish</span>
+                            </div>
+                            <div class="material-item">
+                                <div class="material-swatch" style="background: linear-gradient(135deg, #6e5842 0%, #4f3f30 100%);"></div>
+                                <span class="material-name">Warm Wood Interior</span>
+                            </div>
+                            <div class="material-item">
+                                <div class="material-swatch" style="background: linear-gradient(135deg, #d7d7d7 0%, #b4b4b4 100%);"></div>
+                                <span class="material-name">Daylight Glazing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Lightbox for zoomed images -->
     <div class="lightbox" id="lightbox">
         <span class="lightbox-close">&times;</span>
@@ -236,20 +307,6 @@
                     <p class="about-description">
                         For me, design is about people first. I want to create environments that feel welcoming, inspiring, and memorable. Spaces where people can connect, feel comfortable, and create moments that matter.
                     </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Projects</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Client Satisfaction</div>
-                        </div>
-                    </div>
                 </div>
                 <div class="about-visual">
                     <img src="images/kim-about.png" alt="Kim Vu" class="about-image">
@@ -263,7 +320,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Kim Vu</div>
-                <p class="footer-text">© 2024 Kim Vu. All rights reserved.</p>
+                <p class="footer-text">© 2026 Kim Vu. All rights reserved.</p>
                 <div class="footer-contact">
                     <a href="mailto:kkimvu02@gmail.com" class="footer-link">kkimvu02@gmail.com</a>
                     <span class="footer-separator">•</span>
