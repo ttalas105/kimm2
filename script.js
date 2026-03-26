@@ -151,6 +151,12 @@ const projects = {
         subtitle: 'Family-scale urban infill',
         description: 'Laneway House is a compact urban infill project designed to support real family living on a tight lot. The concept uses a steel plate-inspired exterior language, expressed through a dark facade and clear panel rhythm. The plan prioritizes practical circulation, flexible shared areas, and efficient storage so the home can support daily life comfortably over time.',
         images: ['images/laneway-1.png', 'images/laneway-2.png', 'images/laneway-3.png', 'images/laneway-4.png', 'images/laneway-5.png']
+    },
+    bathroom: {
+        title: 'The Unwind',
+        subtitle: 'Minimal warm retreat',
+        description: 'This bathroom is designed for those who appreciate minimal spaces that still feel intentional and meaningful. Every element serves a purpose, creating a clean and calming environment without excess. Warm lighting softens the space at night, transforming it into a more intimate and relaxing atmosphere.',
+        images: ['images/bathroom-1.png', 'images/bathroom-2.png', 'images/bathroom-3.png', 'images/bathroom-4.png', 'images/bathroom-5.png', 'images/bathroom-6.png']
     }
 };
 
