@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kim Vu | Interior Design Portfolio</title>
+    <title>Kim Vu Designs</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Belleza&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,200&display=swap" rel="stylesheet">
     <style>
       @import url('https://db.onlinewebfonts.com/c/efd5570ca5ea7085dbea8666161b52e8?family=Copperplate+Gothic+Std+29+BC');
     </style>
@@ -24,12 +25,6 @@
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
             </ul>
-            <div class="theme-switcher" aria-label="Theme selector">
-                <button class="theme-btn active" type="button" data-theme="burgundy" title="Burgundy theme" aria-label="Burgundy theme"></button>
-                <button class="theme-btn" type="button" data-theme="cream" title="Clean cream theme" aria-label="Clean cream theme"></button>
-                <button class="theme-btn" type="button" data-theme="green" title="Green theme" aria-label="Green theme"></button>
-                <button class="theme-btn" type="button" data-theme="yellow" title="Pale yellow theme" aria-label="Pale yellow theme"></button>
-            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -46,13 +41,8 @@
         </div>
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="line hero-name">Kim Vu</span>
-                <span class="line hero-tagline">Interior Design</span>
+                <span class="line hero-name">Kim Vu Designs</span>
             </h1>
-            <p class="hero-subtitle">Creating spaces that harmonize with nature, light, and human connection</p>
-            <div class="hero-scroll">
-                <div class="scroll-indicator"></div>
-            </div>
         </div>
     </section>
 
@@ -65,6 +55,18 @@
             </div>
 
             <div class="portfolio-grid">
+                <!-- Project Rosedale -->
+                <div class="portfolio-item" data-project="rosedale">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/rosedale-slide-2.png" alt="Project Rosedale" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3>Project Rosedale</h3>
+                            <p>Full-Home Residential Design</p>
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- LUMA House -->
                 <div class="portfolio-item" data-project="luma">
                     <div class="portfolio-image-wrapper">
@@ -72,30 +74,6 @@
                         <div class="portfolio-overlay">
                             <h3>LUMA House</h3>
                             <p>Temporary Living Structure</p>
-                            <span class="view-project">View Project →</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Infinity Shelter -->
-                <div class="portfolio-item" data-project="infinity">
-                    <div class="portfolio-image-wrapper">
-                        <img src="images/infinity-thumbnail.png" alt="Infinity Shelter" class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <h3>Infinity Shelter</h3>
-                            <p>Figure-Eight Shared Space</p>
-                            <span class="view-project">View Project →</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Laneway House -->
-                <div class="portfolio-item" data-project="laneway">
-                    <div class="portfolio-image-wrapper">
-                        <img src="images/laneway-5.png" alt="Laneway House" class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <h3>Laneway House</h3>
-                            <p>Family-Scale Urban Infill</p>
                             <span class="view-project">View Project →</span>
                         </div>
                     </div>
@@ -118,6 +96,26 @@
     </section>
 
     <!-- Project Detail Sections -->
+    <section id="project-rosedale" class="project-detail" data-project="rosedale">
+        <div class="project-detail-background"></div>
+        <div class="container">
+            <div class="project-detail-content">
+                <div class="project-detail-image">
+                    <img src="images/rosedale-slide-1.png" alt="Project Rosedale" class="project-main-image">
+                    <div class="project-image-nav">
+                        <span class="project-nav-prev" data-project="rosedale">&#8249;</span>
+                        <span class="project-nav-next" data-project="rosedale">&#8250;</span>
+                        <div class="project-image-counter" data-project="rosedale">1 / 10</div>
+                    </div>
+                </div>
+                <div class="project-detail-text">
+                    <h2>Project Rosedale</h2>
+                    <p>Project Rosedale is a full-home interior design project for a classic Rosedale residence, reimagining the living room, kitchen, breakfast nook, and dining room as one cohesive, layered home. The palette moves from a soft Monterey White in the living spaces, to a calming Gloucester Sage in the kitchen, and into a deep, enveloping Chimichurri green in the dining room. Warm wood tones, an arched display niche, and tailored millwork bring depth and intimacy, balancing the home's traditional architecture with a modern, lived-in warmth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="project-luma" class="project-detail" data-project="luma">
         <div class="project-detail-background"></div>
         <div class="container">
@@ -133,163 +131,6 @@
                 <div class="project-detail-text">
                     <h2>LUMA House</h2>
                     <p>LUMA House is a small, light-filled retreat designed to sit gently within its landscape. Its curved form softens the boundary between built space and nature, while the glass facade allows daylight to move freely through the interior. The structure feels calm and grounded, offering openness without losing privacy. LUMA House is meant to be a quiet place for rest, reflection, and simple living, shaped by light, material, and its surroundings.</p>
-                    
-                    <!-- Project Specifications -->
-                    <div class="project-specs">
-                        <button class="specs-toggle" onclick="toggleSpecs('luma')">
-                            <span>Project Details</span>
-                            <span class="specs-icon">+</span>
-                        </button>
-                        <div class="specs-content" id="specs-luma">
-                            <div class="spec-item">
-                                <span class="spec-label">Materials:</span>
-                                <span class="spec-value">Glass, Wood, Concrete</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Area:</span>
-                                <span class="spec-value">450 sq ft</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Year:</span>
-                                <span class="spec-value">2024</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Material Showcase -->
-                    <div class="material-showcase">
-                        <h3>Key Materials</h3>
-                        <div class="materials-grid">
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #8b7355 0%, #6b5a47 100%);"></div>
-                                <span class="material-name">Oak Wood</span>
-                            </div>
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);"></div>
-                                <span class="material-name">Clear Glass</span>
-                            </div>
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #9d9d9d 0%, #7a7a7a 100%);"></div>
-                                <span class="material-name">Concrete</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="project-infinity" class="project-detail" data-project="infinity">
-        <div class="project-detail-background"></div>
-        <div class="container">
-            <div class="project-detail-content">
-                <div class="project-detail-image">
-                    <img src="images/5.jpg" alt="Infinity Shelter" class="project-main-image">
-                    <div class="project-image-nav">
-                        <span class="project-nav-prev" data-project="infinity">&#8249;</span>
-                        <span class="project-nav-next" data-project="infinity">&#8250;</span>
-                        <div class="project-image-counter" data-project="infinity">1 / 3</div>
-                    </div>
-                </div>
-                <div class="project-detail-text">
-                    <h2>Infinity Shelter</h2>
-                    <p>Infinity is a figure-eight shelter designed as a shared space for pause and connection. Its looping form creates two intimate areas linked by a central crossing, allowing people to gather, rest, and move naturally within the landscape. The design explores the infinity shape through sketches, focusing on curved seating and wood as the main material. The figure-eight form creates two connected areas that feel social, comfortable, and open to light and nature.</p>
-                    
-                    <!-- Project Specifications -->
-                    <div class="project-specs">
-                        <button class="specs-toggle" onclick="toggleSpecs('infinity')">
-                            <span>Project Details</span>
-                            <span class="specs-icon">+</span>
-                        </button>
-                        <div class="specs-content" id="specs-infinity">
-                            <div class="spec-item">
-                                <span class="spec-label">Materials:</span>
-                                <span class="spec-value">Cedar Wood, Steel</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Type:</span>
-                                <span class="spec-value">Public Space</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Year:</span>
-                                <span class="spec-value">2023</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Material Showcase -->
-                    <div class="material-showcase">
-                        <h3>Key Materials</h3>
-                        <div class="materials-grid">
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #8b6f47 0%, #6b5a3a 100%);"></div>
-                                <span class="material-name">Cedar Wood</span>
-                            </div>
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #c0c0c0 0%, #a0a0a0 100%);"></div>
-                                <span class="material-name">Steel Frame</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="project-laneway" class="project-detail" data-project="laneway">
-        <div class="project-detail-background"></div>
-        <div class="container">
-            <div class="project-detail-content">
-                <div class="project-detail-image">
-                    <img src="images/laneway-1.png" alt="Laneway House" class="project-main-image">
-                    <div class="project-image-nav">
-                        <span class="project-nav-prev" data-project="laneway">&#8249;</span>
-                        <span class="project-nav-next" data-project="laneway">&#8250;</span>
-                        <div class="project-image-counter" data-project="laneway">1 / 5</div>
-                    </div>
-                </div>
-                <div class="project-detail-text">
-                    <h2>Laneway House</h2>
-                    <p>Laneway House is a compact urban infill project designed to support real family living on a tight lot. The concept uses a steel plate-inspired exterior language, which is expressed through the dark, grounded facade and crisp panel rhythm. Inside, the layout is planned to be efficient but generous, with clear circulation, practical storage, and flexible shared spaces that can support day-to-day routines over time. The project balances durability, comfort, and livability, showing how a laneway home can be both architecturally strong and genuinely functional for a family.</p>
-
-                    <div class="project-specs">
-                        <button class="specs-toggle" onclick="toggleSpecs('laneway')">
-                            <span>Project Details</span>
-                            <span class="specs-icon">+</span>
-                        </button>
-                        <div class="specs-content" id="specs-laneway">
-                            <div class="spec-item">
-                                <span class="spec-label">Materials:</span>
-                                <span class="spec-value">Steel Plate Cladding, Wood Framing, Glass</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Type:</span>
-                                <span class="spec-value">Laneway House</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Focus:</span>
-                                <span class="spec-value">Family-Scale Living</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="material-showcase">
-                        <h3>Key Materials</h3>
-                        <div class="materials-grid">
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #1f1f1f 0%, #0f0f0f 100%);"></div>
-                                <span class="material-name">Steel Plate Finish</span>
-                            </div>
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #6e5842 0%, #4f3f30 100%);"></div>
-                                <span class="material-name">Warm Wood Interior</span>
-                            </div>
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #d7d7d7 0%, #b4b4b4 100%);"></div>
-                                <span class="material-name">Daylight Glazing</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -311,45 +152,6 @@
                     <h2>The Unwind</h2>
                     <p>This bathroom is designed for those who appreciate minimal spaces that still feel intentional and meaningful. Every element serves a purpose, creating a clean and calming environment without excess. Warm lighting softens the space at night, transforming it into a more intimate and relaxing atmosphere.</p>
                     <p>AI was used as a tool throughout the design process to explore variations, test ideas, and visualize possibilities quickly. Rather than replacing design thinking, it supported it, helping refine the concept and push the project further while keeping the focus on human experience.</p>
-
-                    <div class="project-specs">
-                        <button class="specs-toggle" onclick="toggleSpecs('bathroom')">
-                            <span>Project Details</span>
-                            <span class="specs-icon">+</span>
-                        </button>
-                        <div class="specs-content" id="specs-bathroom">
-                            <div class="spec-item">
-                                <span class="spec-label">Materials:</span>
-                                <span class="spec-value">Marble, Walnut Wood, Stone</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Type:</span>
-                                <span class="spec-value">Interior / Bathroom</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Focus:</span>
-                                <span class="spec-value">Minimal Warm Design</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="material-showcase">
-                        <h3>Key Materials</h3>
-                        <div class="materials-grid">
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #e8ddd0 0%, #d4c8b8 100%);"></div>
-                                <span class="material-name">Marble</span>
-                            </div>
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #5c3d2e 0%, #3e2a1e 100%);"></div>
-                                <span class="material-name">Walnut Wood</span>
-                            </div>
-                            <div class="material-item">
-                                <div class="material-swatch" style="background: linear-gradient(135deg, #b8ada0 0%, #9a8e80 100%);"></div>
-                                <span class="material-name">Stone</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -391,7 +193,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Kim Vu</div>
+                <div class="footer-logo">Kim Vu Designs</div>
                 <p class="footer-text">© 2026 Kim Vu. All rights reserved.</p>
                 <div class="footer-contact">
                     <a href="mailto:kkimvu02@gmail.com" class="footer-link">kkimvu02@gmail.com</a>

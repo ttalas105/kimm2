@@ -5,30 +5,48 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Latin Becker Compress';
+    src: url('fonts/LatinBeckerCompress.woff') format('woff'),
+         url('fonts/LatinBeckerCompress.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Becker Compress';
+    src: url('fonts/BeckerCompress.woff') format('woff'),
+         url('fonts/BeckerCompress.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
-    --color-cream: #4a2020;
-    --color-beige: #5c2828;
-    --color-taupe: #6b3232;
-    --color-brown: #b8956e;
-    --color-dark-brown: #e8dcc4;
-    --color-green: #8b5a5a;
-    --color-dark-green: #7a4a4a;
-    --color-forest: #6b3a3a;
-    --color-white: #f5f1e8;
-    --color-black: #2a1515;
-    --color-light: #f5f1e8;
-    --bg-main: #4a2020;
-    --bg-alt: #5c2828;
-    --bg-deep: #2a1515;
-    --nav-bg: rgba(74, 32, 32, 0.95);
-    --hero-overlay: rgba(42, 20, 20, 0.4);
-    --project-overlay-start: rgba(74, 32, 32, 0.95);
-    --project-overlay-end: rgba(42, 21, 21, 0.98);
-    --hero-title-color: #e8dcc4;
-    --hero-subtitle-color: #b8956e;
-    --card-bg-soft: rgba(74, 32, 32, 0.6);
-    --text-color: #f5f1e8;
-    --text-light: #d4c4a8;
+    --color-cream: #f4f1e9;
+    --color-beige: #d6cdbb;
+    --color-taupe: #d6cdbb;
+    --color-brown: #d6cdbb;
+    --color-dark-brown: #d6cdbb;
+    --color-green: #d6cdbb;
+    --color-dark-green: #d6cdbb;
+    --color-forest: #d6cdbb;
+    --color-white: #1a1a1a;
+    --color-black: #1a1a1a;
+    --color-light: #f4f1e9;
+    --bg-main: #f4f1e9;
+    --bg-alt: #d6cdbb;
+    --bg-deep: #f4f1e9;
+    --nav-bg: rgba(244, 241, 233, 0.95);
+    --hero-overlay: rgba(214, 205, 187, 0.25);
+    --project-overlay-start: rgba(244, 241, 233, 0.92);
+    --project-overlay-end: rgba(214, 205, 187, 0.95);
+    --hero-title-color: #1a1a1a;
+    --hero-subtitle-color: #1a1a1a;
+    --card-bg-soft: rgba(214, 205, 187, 0.5);
+    --text-color: #1a1a1a;
+    --text-light: #2a2a2a;
     
     --font-body: 'Copperplate Gothic Std 29 BC', 'Copperplate Gothic', serif;
     --font-headline: 'Les Palmiers', 'Cinzel', serif;
@@ -145,52 +163,6 @@ body {
     width: 100%;
 }
 
-.theme-switcher {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    right: 2rem;
-    z-index: 1001;
-}
-
-.theme-btn {
-    width: 18px;
-    height: 18px;
-    min-width: 18px;
-    min-height: 18px;
-    flex: 0 0 18px;
-    padding: 0;
-    margin: 0;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    display: block;
-    border-radius: 50%;
-    border: 2px solid rgba(245, 241, 232, 0.5);
-    cursor: pointer;
-    transition: var(--transition-fast);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    background-color: transparent;
-    outline: none;
-}
-
-.theme-btn:hover {
-    transform: scale(1.15);
-    border-color: rgba(245, 241, 232, 0.8);
-}
-
-.theme-btn.active {
-    border-color: var(--color-white);
-    box-shadow: 0 0 0 2px rgba(245, 241, 232, 0.35);
-    transform: scale(1.1);
-}
-
-.theme-btn[data-theme="burgundy"] { background-color: #5c2828 !important; }
-.theme-btn[data-theme="cream"] { background-color: #E8E4DE !important; }
-.theme-btn[data-theme="green"] { background-color: #3f5f4b !important; }
-.theme-btn[data-theme="yellow"] { background-color: #d8c77d !important; }
-
 .hamburger {
     display: none;
     flex-direction: column;
@@ -293,12 +265,13 @@ body {
     animation-delay: 0.2s;
 }
 
-/* Kim Vu – Alex Brush script */
+/* Kim Vu Designs – Becker Compress */
 .hero-title .hero-name {
-    font-family: 'Alex Brush', cursive;
+    font-family: 'Becker Compress', sans-serif;
     font-weight: 400;
-    font-size: clamp(3.2rem, 9vw, 7.5rem);
-    letter-spacing: 0.02em;
+    font-size: clamp(3.5rem, 11vw, 9rem);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     color: var(--hero-title-color);
 }
 
@@ -413,9 +386,11 @@ section {
 }
 
 .section-title {
-    font-family: var(--font-headline);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
+    font-family: 'Becker Compress', sans-serif;
+    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     color: var(--text-color);
     margin-bottom: 1rem;
 }
@@ -531,8 +506,10 @@ section {
 }
 
 .portfolio-overlay h3 {
-    font-family: var(--font-headline);
-    font-size: 2rem;
+    font-family: 'Becker Compress', sans-serif;
+    font-size: 2.4rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     color: #f5f1e8;
     margin-bottom: 0.5rem;
 }
@@ -773,19 +750,6 @@ section {
     z-index: 1;
 }
 
-/* Green background for last three projects */
-#project-floorplans .project-detail-background::after,
-#project-process .project-detail-background::after,
-#project-site .project-detail-background::after {
-    background: linear-gradient(135deg, rgba(107, 58, 58, 0.95) 0%, rgba(74, 42, 42, 0.98) 100%);
-}
-
-#project-floorplans,
-#project-process,
-#project-site {
-    background: linear-gradient(135deg, var(--color-forest) 0%, var(--bg-main) 100%);
-}
-
 .project-detail-content {
     position: relative;
     z-index: 2;
@@ -814,6 +778,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     transition: opacity 0.3s ease;
+    cursor: pointer;
 }
 
 /* Laneway image framing */
@@ -896,8 +861,10 @@ section {
 }
 
 .project-detail-text h2 {
-    font-family: var(--font-headline);
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-family: 'Becker Compress', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     margin-bottom: 1.5rem;
     color: var(--text-color);
     line-height: 1.2;
@@ -917,8 +884,11 @@ section {
 
 .project-detail-text p {
     color: var(--text-light);
-    line-height: 1.8;
-    font-size: 1.1rem;
+    font-family: 'Imbue', serif;
+    font-weight: 200;
+    line-height: 1.4;
+    font-size: 1.6rem;
+    letter-spacing: 0.01em;
     margin-bottom: 2rem;
 }
 
@@ -1372,10 +1342,14 @@ section {
 }
 
 .about-description {
-    font-size: 1.1rem;
+    font-family: 'Imbue', serif;
+    font-weight: 200;
+    font-size: 1.6rem;
+    letter-spacing: 0.01em;
     color: var(--text-color);
     margin-bottom: 1.5rem;
-    line-height: 1.8;
+    line-height: 1.4;
+    text-transform: none;
 }
 
 .about-stats {
@@ -1497,14 +1471,21 @@ section {
 }
 
 .footer-logo {
-    font-family: var(--font-headline);
-    font-size: 2rem;
-    font-weight: 700;
+    font-family: 'Becker Compress', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     margin-bottom: 1rem;
     color: var(--text-color);
 }
 
 .footer-text {
+    font-family: 'Imbue', serif;
+    font-weight: 200;
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
     margin-bottom: 1.5rem;
     opacity: 0.8;
 }
@@ -1521,9 +1502,12 @@ section {
 .footer-link {
     color: var(--text-light);
     text-decoration: none;
-    font-weight: 500;
+    font-family: 'Imbue', serif;
+    font-weight: 200;
     transition: var(--transition-fast);
-    font-size: 0.95rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
 }
 
 .footer-link:hover {
@@ -1545,6 +1529,11 @@ section {
 .social-link {
     color: var(--text-light);
     text-decoration: none;
+    font-family: 'Imbue', serif;
+    font-weight: 200;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
     transition: var(--transition-fast);
     position: relative;
 }
@@ -1570,10 +1559,6 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .theme-switcher {
-        display: none;
-    }
-
     .nav-menu {
         position: fixed;
         left: -100%;
